@@ -33,7 +33,7 @@ class PostController extends Controller
             $posts = $posts->where('title', 'like', '%' . request()->q . '%');
         })->paginate(10);
 
-        return view('admin.post.index', compact('posts'));
+        return view('admin.post.index', compact('posts')); 
     }
 
     /**
